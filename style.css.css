@@ -1,0 +1,93 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+body { background: #0d1117; color: #eee; line-height: 1.6; transition: background 0.4s, color 0.4s; overflow-x: hidden; }
+body.dark { background: #f4f7fa; color: #333; }
+
+/* === Background Canvas === */
+#stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  background: black;
+}
+
+/* === Profile Picture === */
+.profile-pic {
+  width: 150px; height: 150px;
+  border-radius: 50%; overflow: hidden;
+  margin: auto; border: 4px solid #00d4ff;
+  transition: transform 0.3s;
+}
+.profile-pic img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.profile-pic:hover { transform: scale(1.1); }
+
+header {
+  background: transparent;
+  color: white; padding: 2rem 1rem; text-align: center; position: sticky; top: 0; z-index: 5;
+}
+header h1 { font-size: 2.2rem; margin-top: 1rem; }
+header p { margin-top: 0.5rem; font-size: 1.1rem; min-height: 24px; }
+nav { margin-top: 1rem; }
+nav a { color: #00d4ff; text-decoration: none; margin: 0 10px; font-weight: 500; }
+nav a:hover { text-decoration: underline; }
+
+#darkToggle {
+  background: #00d4ff; color: black; border: none;
+  padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer;
+  font-weight: bold; margin-top: 10px;
+}
+
+section { padding: 2rem 1rem; max-width: 900px; margin: auto; position: relative; z-index: 1; }
+h2 { font-size: 1.8rem; margin-bottom: 1rem; color: #00d4ff; border-left: 5px solid #ff00d4; padding-left: 10px; }
+body.dark h2 { color: #2575fc; border-color: #6a11cb; }
+
+.card {
+  background: rgba(255, 255, 255, 0.1); margin-bottom: 2rem; border-radius: 15px;
+  padding: 1.5rem; backdrop-filter: blur(6px);
+  transition: transform 0.3s, background 0.3s;
+}
+body.dark .card { background: white; color: black; }
+.card:hover { transform: translateY(-5px); }
+
+/* === Skills === */
+.skill { margin-bottom: 1rem; }
+.skill p { margin-bottom: 5px; }
+.progress {
+  width: 100%; height: 10px; background: #333; border-radius: 5px; overflow: hidden;
+}
+.progress-bar {
+  height: 100%; background: linear-gradient(135deg, #6a11cb, #2575fc);
+  width: 0; transition: width 1.5s;
+}
+
+/* === Projects === */
+.project-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;
+}
+.project {
+  background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 12px;
+  transition: transform 0.2s; border: 1px solid rgba(255,255,255,0.3);
+}
+.project:hover { transform: scale(1.05); box-shadow: 0 6px 12px rgba(0,0,0,0.3); }
+.project h3 { color: #00d4ff; margin-bottom: 0.5rem; }
+
+/* === Contact Form === */
+form input, form textarea {
+  width: 100%; padding: 0.8rem; margin-bottom: 1rem;
+  border-radius: 10px; border: 1px solid #ccc; outline: none;
+}
+form button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white; border: none; padding: 0.8rem 1.5rem;
+  border-radius: 12px; cursor: pointer; font-size: 1rem;
+}
+form button:hover { opacity: 0.9; }
+
+footer { text-align: center; padding: 1.5rem; background: transparent; color: #00d4ff; margin-top: 2rem; }
+@media (max-width: 600px) { 
+  header h1 { font-size: 1.8rem; } 
+  h2 { font-size: 1.4rem; } 
+  .profile-pic { width: 120px; height: 120px; }
+}

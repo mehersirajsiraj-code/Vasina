@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Stars -->
+  <canvas id="stars"></canvas>
+
+  <!-- Header -->
+  <header>
+    <div class="profile-pic">
+      <img src="profile.jpg" alt="My Photo">
+    </div>
+    <h1>Hi, I'm Vasina bee J</h1>
+    <p id="typing"></p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="darkToggle">🌙 Toggle Theme</button>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>Hello! I am a student passionate about coding, design, and learning new technologies. 
+    This portfolio showcases my skills, projects, and achievements.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="card">
+    <h2>My Skills</h2>
+    <div class="skill"><p>HTML & CSS</p><div class="progress"><div class="progress-bar" data-progress="90%"></div></div></div>
+    <div class="skill"><p>JavaScript</p><div class="progress"><div class="progress-bar" data-progress="75%"></div></div></div>
+    <div class="skill"><p>C++ </p><div class="progress"><div class="progress-bar" data-progress="65%"></div></div></div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="card">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project"><h3>📘 Portfolio Website</h3><p>A personal website using HTML, CSS, and JavaScript.</p></div>
+      <div class="project"><h3>📱 Mobile App Design</h3><p>UI/UX design for a student productivity app.</p></div>
+      <div class="project"><h3>💻 Coding Projects</h3><p>Practice projects in C++,  Python.</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="card">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Vasina bee J | Student Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
